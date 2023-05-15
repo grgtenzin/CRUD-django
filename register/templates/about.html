@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="{% url 'e_list' %}">VIEW-LIST</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+                <li><a>ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    <blockquote>
+        <h1>
+            About us
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit pariatur voluptas beatae placeat quas esse, debitis nemo deleniti mollitia hic earum illum rem, nostrum molestiae molestias quae libero qui accusantium.</p>
+    </blockquote>
+    
+</body>
+</html>

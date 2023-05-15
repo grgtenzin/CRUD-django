@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="{% url 'e_list' %}">VIEW-LIST</a></li>
+                <li><a>CONTACT US</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <blockquote>
+        <form>
+            <label for="name" class="form-label">Your name:</label><br>
+            <input type="text" for="name" required placeholder="name"><br>
+            <br><label for="cemail" class="form-label">Your email:</label><br>
+            <input type="email" for="cemail" required placeholder="email"><br>
+            <br><label for="feedback" class="form-label">feedback:</label><br>
+            <textarea placeholder="feedback" style="height: 100px; width: 400px;"></textarea>
+
+            <br><button>Submit</button>
+        </form>
+        <br>
+        <hr>
+    </blockquote>
+</body>
+</html>

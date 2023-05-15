@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <div class="class">
+            <h1>
+                EMPLOYEE REGISTER
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="{% url 'e_list' %}">VIEW-LIST</a></li>
+                    <li><a href="contact">CONTACT US</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+        {% if messages %}
+        {% for x in messages %}
+        <p style="color: green;">{{x}}</p>
+        {% endfor %}
+        {% endif %}
+
+
+        <div class="class2">
+            <form class="" method="post">
+                {% csrf_token %}
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" required>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required><br><br>
+                <br><label for="salary">Salary------</label>
+                <input type="text" name="salary" id="salary" required><br><br>
+                <br><label for="position">Position----</label>
+                <input type="text" name="position" id="position" required><br><br>
+                <br><label for="email">Email------</label>
+                <input type="email" name="email" id="email" required><br><br>
+                <br><label for="phone">Phone No-</label>
+                <input type="text" name="phone" id="phone" required><br><br>
+                <br><button type="submit"> Register </button>
+
+
+            </form>
+        </div>
+    </blockquote>
+        <div class="container2">
+            <div class="row2">
+                <h2>
+                    footer section
+                </h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sunt cupiditate accusamus quasi consequuntur omnis, reprehenderit harum explicabo soluta totam quidem magnam voluptatibus ut at quibusdam maxime tempore veritatis vel?
+                </p>
+            </div>
+        </div>
+
+</body>
+</html>
